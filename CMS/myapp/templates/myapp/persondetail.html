@@ -1,0 +1,39 @@
+{% extends 'myapp/base.html' %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Person Detail</title>
+</head>
+<body>
+	{% block body %}
+	<h2>hello</h2>
+		<div class="container">
+		<table class="table table-bordered mt-4">
+		  <thead>
+		    <tr>
+		      <th scope="col">First name</th>
+		      <th scope="col">Last Name</th>
+		      <th scope="col">Mobile No</th>
+		      <th scope="col">Email</th>
+		      <th scope="col">Street</th>
+		      <th scope="col">Town</th>
+		      <th scope="col">Postalcode</th>
+		      <th scope="col">Country</th>
+		      <th scope="col">Creation Date</th>
+		      <th scope="col">Change Date</th>
+		    </tr>
+		  </thead>
+		  <tbody>
+		  	{% for i in person %}
+		    <tr>      
+		      <td>{{ i.first_name }}</td>
+		      <td>{{ i.last_name }}</td>
+		      <td>{{ i.telephone1}},{{i.telephone2}}</td>
+		    </tr>
+		    {% endfor %}
+		  </tbody>
+		</table>
+	</div>
+	{% endblock %}
+</body>
+</html>
